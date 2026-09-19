@@ -9,15 +9,15 @@ import sys
 from datetime import datetime, timezone
 from typing import List
 
-from .banner import grab_banner
-from .config import ScanConfig, DEFAULT_PORT_SPEC
-from .port_list import expand_ports, list_presets
-from .reporter import ScanReport, TargetReport, build_report, print_report, write_json
-from .risk import assess_risk
-from .scanner import PortState, scan_target
-from .services import service_name
-from .target import resolve_target
-from .utils import setup_logging
+from banner import grab_banner
+from config import ScanConfig, DEFAULT_PORT_SPEC
+from port_list import expand_ports, list_presets
+from reporter import ScanReport, TargetReport, build_report, print_report, write_json
+from risk import assess_risk
+from scanner import PortState, scan_target
+from services import service_name
+from target import resolve_target
+from utils import setup_logging
 
 logger = setup_logging()
 

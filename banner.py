@@ -6,8 +6,14 @@ import asyncio
 import logging
 from typing import Optional
 
-from .config import ScanConfig
-from .utils import setup_logging
+from config import ScanConfig
+from utils import setup_logging
+
+import sys, os
+_sys_path_insert = os.path.dirname(os.path.abspath(__file__))
+if _sys_path_insert not in sys.path:
+    sys.path.insert(0, _sys_path_insert)
+
 
 logger = setup_logging()
 
@@ -16,6 +22,7 @@ logger = setup_logging()
 
 def _probe_for_port(host: str, port: int) -> Optional[bytes]:
     """Return the bytes to send immediately after connect, or None if the
+
     service sends a banner unsolicited (SSH, FTP, SMTP, etc.)."""
     if port in (22, 23):
         # SSH / Telnet send banner on connect — no probe needed.

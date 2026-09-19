@@ -8,8 +8,14 @@ from dataclasses import dataclass, field
 from enum import Enum
 from typing import List, Optional
 
-from .config import ScanConfig
-from .utils import setup_logging
+from config import ScanConfig
+from utils import setup_logging
+
+import sys, os
+_sys_path_insert = os.path.dirname(os.path.abspath(__file__))
+if _sys_path_insert not in sys.path:
+    sys.path.insert(0, _sys_path_insert)
+
 
 logger = setup_logging()
 
@@ -34,6 +40,7 @@ async def _probe_port(
     semaphore: asyncio.Semaphore,
 ) -> PortResult:
     """Probe a single TCP port with a connect scan."""
+
     async with semaphore:
         if config.rate_limit_sec and config.rate_limit_sec > 0:
             await asyncio.sleep(config.rate_limit_sec)
