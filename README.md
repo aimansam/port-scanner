@@ -28,31 +28,31 @@ pip install -e .
 Scan common ports on a target:
 
 ```bash
-python -m port_scanner 192.168.1.1
+port-scanner 192.168.1.1
 ```
 
 Scan specific ports:
 
 ```bash
-python -m port_scanner 192.168.1.1 --ports 22,80,443,8080
+port-scanner 192.168.1.1 --ports 22,80,443,8080
 ```
 
 Scan a range:
 
 ```bash
-python -m port_scanner 192.168.1.1 --ports 1-1024
+port-scanner 192.168.1.1 --ports 1-1024
 ```
 
 Scan multiple targets:
 
 ```bash
-python -m port_scanner 192.168.1.1 192.168.1.2 192.168.1.3
+port-scanner 192.168.1.1 192.168.1.2 192.168.1.3
 ```
 
 Generate a report:
 
 ```bash
-python -m port_scanner 192.168.1.1 --report scan_report.json
+port-scanner 192.168.1.1 --output scan_report.json
 ```
 
 ## Requirements
@@ -63,4 +63,3 @@ python -m port_scanner 192.168.1.1 --report scan_report.json
 ## License
 
 MIT
-
