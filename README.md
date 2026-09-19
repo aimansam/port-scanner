@@ -1,5 +1,12 @@
 # Port Scanner
 
+```text
+╔══════════════════════════════╗
+║        PORT SCANNER          ║
+║  discover services safely    ║
+╚══════════════════════════════╝
+```
+
 Network port scanner in Python using socket programming. Fast, concurrent port scanning with service detection and risk assessment.
 
 [![Python](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/)
