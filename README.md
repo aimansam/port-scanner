@@ -1,11 +1,11 @@
 # Port Scanner
 
 ```text
-########     ######   ########   ##########
-##      ## ##      ## ##      ##     ##    
-########   ##      ## ## ########       ##    
-##         ##      ## ##    ##       ##    
-##           ######   ##      ##     ##    
+ ___  ___  ___ _____   ___  ___   _   _  _ _  _ ___ ___ 
+| _ \/ _ \| _ \_   _| / __|/ __| /_\ | \| | \| | __| _ \
+|  _/ (_) |   / | |   \__ \ (__ / _ \| .` | .` | _||   /
+|_|  \___/|_|_\ |_|   |___/\___/_/ \_\_|\_|_|\_|___|_|_\
+                                                        
 ```
 
 Network port scanner in Python using socket programming. Fast, concurrent port scanning with service detection and risk assessment.
